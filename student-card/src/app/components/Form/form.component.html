@@ -1,0 +1,33 @@
+<div class="card-container">
+    <div class="card">
+        <div class="card-1">
+            <h2>Enter Your Information</h2>
+        </div>
+        <form id="card-form" (ngSubmit)="onSubmit()" #cardForm="ngForm">
+            <label for="full-name">Name</label>
+            <input type="text" id="full-name" [(ngModel)]="fullName" name="fullName" placeholder="Enter your Full Name"
+                required>
+
+            <label for="establishment">Establishment</label>
+            <input type="text" id="establishment" [(ngModel)]="establishment" name="establishment"
+                placeholder="Enter your Establishment" required>
+
+            <label for="regis-number">Registration Number</label>
+            <input type="number" id="regis-number" [(ngModel)]="registrationNumber" name="registrationNumber"
+                placeholder="Enter your Registration Number" required>
+
+            <label for="rib-personnel">Personal Bank Details</label>
+            <input type="text" id="rib-personnel" [(ngModel)]="ribPersonnel" name="ribPersonnel"
+                placeholder="Enter your Personal Bank Details" required>
+            
+                
+            <label for="profileImage">Choose Profile Image:</label>
+            <input type="file" id="profileImage" (change)="onFileSelected($event)" accept="image/*">
+
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+
