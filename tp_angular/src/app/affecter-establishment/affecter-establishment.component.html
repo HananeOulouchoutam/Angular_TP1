@@ -1,0 +1,23 @@
+<div *ngIf="student; else noStudentFound">
+  <form (ngSubmit)="affecterEtablissement()" #form="ngForm" class="affecter-form">
+    <div></div>
+
+    <p class="header-text">Affecter un établissement à l'étudiant : <span>{{student.firstname}}
+        {{student.lastname}}</span></p>
+
+    <div class="select-et">
+      <label for="establishmentId">Établissement</label>
+      <select id="establishmentId" [(ngModel)]="establishmentId" name="establishmentId" required>
+        <option *ngFor="let establishment of establishments" [value]="establishment.id">
+          {{ establishment.name }}
+        </option>
+      </select>
+    </div>
+
+    <button type="submit" [disabled]="!form.valid">Affecter</button>
+  </form>
+</div>
+
+<ng-template #noStudentFound>
+  <p>Aucun étudiant trouvé pour cet ID.</p>
+</ng-template>

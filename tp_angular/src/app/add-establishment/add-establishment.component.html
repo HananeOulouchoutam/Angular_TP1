@@ -1,0 +1,17 @@
+
+<div class="container-add-establishment">
+    <h2>Ajouter un nouvel établissementt</h2>
+<form class="establishment-form" (ngSubmit)="onSubmit()" #establishmentForm="ngForm">
+    
+    <div>
+        <label for="name">Nom de l'établissement:</label>
+        <input id="name" type="text" name="name" [(ngModel)]="establishment.name" required />
+    </div>
+
+    <div>
+        <label for="address">Adresse:</label>
+        <input id="address" type="text" name="address" [(ngModel)]="establishment.address" required />
+    </div>
+    <button type="submit" [disabled]="!establishmentForm.form.valid">Ajouter</button>
+</form>
+</div>

@@ -1,0 +1,65 @@
+.student-list-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-btn {
+    text-decoration: none;
+    border:2px solid rgba(214, 140, 69, 0.95);
+    padding: 10px;
+    border-radius: 5px;
+    color: rgba(214, 140, 69, 0.95);
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-left: auto;
+}
+
+
+.add-btn:hover {
+    background-color: rgba(214, 140, 69, 0.3);
+    color:rgba(214, 140, 69, 1) ;
+}
+
+
+.student-list-container h2 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(214, 140, 69, 0.95);
+    margin-bottom: 20px;
+    line-height: 1;
+    text-transform: capitalize;
+}
+
+
+.bottom-right-btn {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottom-right-btn > p {
+    font-size: 14px;
+    color: rgba(214, 140, 69, 1);
+}
+
+.bottom-right-btn > a {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color:rgba(214, 140, 69, 0.8) ;
+    color: #fcfcfc;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;             
+    justify-content: center;   
+    align-items: center; 
+}
+
+

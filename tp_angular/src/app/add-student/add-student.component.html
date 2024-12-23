@@ -1,0 +1,31 @@
+<div class="container">
+    <h2 class="heading">Ajouter un étudiant</h2>
+
+    <form #userForm="ngForm" (ngSubmit)="submitForm(userForm)" class="add-form">
+        <div class="form-group">
+            <label for="firstname">First Name</label>
+            <input type="text" class="form-control" id="firstname" name="firstname" [(ngModel)]="student.firstname"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label for="lastname">Last Name</label>
+            <input type="text" class="form-control" id="lastname" name="lastname" [(ngModel)]="student.lastname"
+                required>
+
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" [(ngModel)]="student.email" required email>
+        </div>
+
+        <div class="form-group">
+            <label for="year">Year</label>
+            <input type="text" class="form-control" id="year" name="year" [(ngModel)]="student.year" required>
+        </div>
+
+
+        <button type="submit">Submit</button>
+    </form>
+</div>

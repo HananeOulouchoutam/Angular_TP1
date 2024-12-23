@@ -1,0 +1,23 @@
+<div class="establishments-container">
+    <h2>Liste des établissements</h2>
+
+    <div *ngIf="establishments.length === 0">
+        <p>Aucun établissement disponible.</p>
+    </div>
+
+
+    <table *ngIf="establishments.length > 0" class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom de l'établissement</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let establishment of establishments">
+                <td>{{ establishment.id }}</td>
+                <td>{{ establishment.name }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
